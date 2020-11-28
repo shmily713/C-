@@ -1,0 +1,16 @@
+#include <stdio.h>
+int main()
+{
+	int i ;
+	int k ;
+	for (i = 100;i<=200;i++)
+	{
+		for (k = 2; k < i; k++)
+		{
+			if (i % k == 0)
+				break;
+		}
+		if (i == k)
+			printf("%d\n", i);
+	}	
+}
