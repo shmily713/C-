@@ -1,0 +1,28 @@
+#include<stdio.h>
+int main()
+{
+	int n;
+	int num=0;
+	scanf_s("%d", &n);
+	//使用取余方法改变正负号
+	/*for (int i = 1; i <= n; i++)
+	{
+		if (i%2 == 0)
+		{
+			num = num - i;
+		}
+		else
+		{
+			num = num + i;
+		}
+	}*/
+	//利用-1的指数来改变正负号
+	int flg = 1;
+	for (int i = 1; i <= n; i++)
+	{
+		num += i * flg;
+		flg *= -1;
+	}
+	printf("%d", num);
+	return 0;
+}
