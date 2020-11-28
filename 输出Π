@@ -1,0 +1,13 @@
+#include<stdio.h>
+int main()
+{
+	double sum=0;
+	int flg = 1;
+	for(int i = 1;i<1000000;i += 2)//i为分母
+	{
+		sum = sum + flg*(1.0 / i);
+		flg *= -1;
+	}
+	printf("%f", sum*4);
+	return 0;
+}
