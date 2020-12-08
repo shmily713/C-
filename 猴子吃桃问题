@@ -1,0 +1,17 @@
+#include <stdio.h>
+int peach(int day)//第day天桃子只剩下一个
+{
+	int a = 1;//桃子个数
+	for (int i = day - 1; i >= 1; i--)
+	{
+		a = (a + 1) * 2;
+	}
+	return a;
+}
+int main()
+{
+	int day;
+	scanf("%d",&day);
+	int x = peach(day);
+	printf("%d", x);
+}
