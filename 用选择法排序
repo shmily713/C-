@@ -1,0 +1,32 @@
+#include <stdio.h>
+void SelectSort(int* arr, int len)
+{
+	int minIndex;//最小值下标
+	int temp = 0;//交换使用
+	for (int i = 0; i < len-1; i++)
+	{
+		minIndex = i;
+		for (int j = i+1; j < len; j++)//找到最小值的下标
+		{
+			if (arr[minIndex] > arr[j])
+				minIndex = j;
+		}
+	temp = arr[i];
+	arr[i] = arr[minIndex];
+	arr[minIndex] = temp;
+	}
+}
+void Show(int* arr, int len)
+{
+	for (int i = 0; i < len; i++)
+	{
+		printf("%d", arr[i]);
+	}
+}
+int main()
+{
+	int arr[] = { 3,1,6,2,4 };
+	SelectSort(arr, sizeof(arr) / sizeof(arr[0]));
+	Show(arr, sizeof(arr) / sizeof(arr[0]));
+	return 0;
+}
